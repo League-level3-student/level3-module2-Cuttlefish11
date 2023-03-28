@@ -30,14 +30,37 @@ public class Algorithms {
     	
     }
 
-	public static int findLongestWord(List<String> words) {
-		String answer=":)";
+	public static String findLongestWord(List<String> words) {
+		String answer="";
 		for (int i = 0; i < words.size(); i++) {
-			if(words.get(i).length()>words.get(i-1).length()) {
-				
+			if(words.get(i).length() > answer.length()) {
+				answer = words.get(i);
 			}
 			
 		}
-		return 0;
+		return answer;
 	}
+	
+	public static boolean containsSOS(List<String> words) {
+	boolean answer = false;
+	for (int i = 0; i < words.size(); i++) {
+		if(words.get(i).contains("... --- ...")) {
+			answer=true;
+		}
+	}
+		return answer;
+	}
+	public static List<Double> sortScores (List<Double> words) {
+		List<Double> results=words;	
+		for (int i = 0; i < results.size(); i++) {
+/*			for (int j = 0; j < results.size()-1; j++) {
+				if(results.get(j)>results.get(j+1)) {
+					Double temp = results.get(j);
+					results.get(j)=results.get(j+1);
+					results.get(j+1)=temp;
+				}
+			}
+*/		}
+			return results;
+		}
 }
