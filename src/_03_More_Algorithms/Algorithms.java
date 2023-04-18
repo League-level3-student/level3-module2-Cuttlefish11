@@ -63,4 +63,18 @@ public class Algorithms {
 */		}
 			return results;
 		}
+	public static List<String> sortDNA (List<String> unsorted) {
+		List<String> sort = unsorted;
+		for (int i = 0; i < sort.size(); i++) {
+			for (int j = 0; j < sort.size()-1; j++) {
+				if(unsorted.get(j).length()>unsorted.get(j+1).length()) {
+					 int temp = sort.get(j);
+	                    arr[k] = arr[ k+1 ];
+	                    arr[ k+1 ] = temp;
+				}
+			}
+		}
+		return null;
+		
+	}
 }
