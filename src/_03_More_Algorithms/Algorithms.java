@@ -8,8 +8,61 @@ import java.util.List;
 public class Algorithms {
     
     public static String multiply(int num1, int num2) {
-        return null;
+    	int num3 = num1*num2;
+    	String answer = num1 + " x "+ num2 +""+" = " + num3;
+        return answer;
     }
+    public static boolean isPrime(int num1) {
+		if(num1%2==0 && !(num1==2)) {
+			return false;
+		}
+		else if(num1%3==0 && !(num1==3)) {
+			return false;
+		}
+		else if(num1%5==0 && !(num1==5)) {
+			return false;
+		}
+		else if(num1%7==0 && !(num1==7)) {
+			return false;
+		}
+		else if(num1%11==0 && !(num1==11)) {
+			return false;
+		}
+		else if(num1%17==0 && !(num1==17)) {
+			return false;
+		}
+		else {
+    	return true;
+		}
+    }
+    public static boolean isSquare(int num1) {
+		int k = 1;
+    	for (int i = 0; i < 110; i++) {
+			if(num1==i*i) {
+				k=2;
+			}
+    	}
+			if(k==2) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+    public static boolean isCube(int num1) {
+		int k = 1;
+    	for (int i = 0; i < 10; i++) {
+			if(num1==i*i*i) {
+				k=2;
+			}
+    	}
+			if(k==2) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
     
     public static int findBrokenEgg(List<String> eggs) {
     	for (int i = 0; i < eggs.size(); i++) {
@@ -53,14 +106,14 @@ public class Algorithms {
 	public static List<Double> sortScores (List<Double> words) {
 		List<Double> results=words;	
 		for (int i = 0; i < results.size(); i++) {
-/*			for (int j = 0; j < results.size()-1; j++) {
+			for (int j = 0; j < results.size()-1; j++) {
 				if(results.get(j)>results.get(j+1)) {
 					Double temp = results.get(j);
-					results.get(j)=results.get(j+1);
-					results.get(j+1)=temp;
+					results.get(j).equals(results.get(j+1));
+					results.get(j+1).equals(temp);
 				}
 			}
-*/		}
+		}
 			return results;
 		}
 	public static List<String> sortDNA (List<String> unsorted) {
@@ -68,13 +121,26 @@ public class Algorithms {
 		for (int i = 0; i < sort.size(); i++) {
 			for (int j = 0; j < sort.size()-1; j++) {
 				if(unsorted.get(j).length()>unsorted.get(j+1).length()) {
-					 int temp = sort.get(j);
-	                    arr[k] = arr[ k+1 ];
-	                    arr[ k+1 ] = temp;
+					 String temp = sort.get(j);
+	                    sort.get(j).equals(sort.get(j+1));
+	                    sort.get(j+1).equals(temp);
 				}
 			}
 		}
-		return null;
+		return sort;
 		
+	}
+	public static  List<String> sortWords(List<String> words) {
+		List<String> answer=words;
+		for (int i = 0; i < answer.size(); i++) {
+			for (int j = 0; j < answer.size()-1; j++) {
+				if (answer.get(j).compareTo(answer.get(j+1)) > 0) {
+					String temp = answer.get(j);
+                    answer.get(j).equals(answer.get(j+1));
+                    answer.get(j+1).equals(temp);
+				}
+			}
+		}
+		return answer;
 	}
 }
