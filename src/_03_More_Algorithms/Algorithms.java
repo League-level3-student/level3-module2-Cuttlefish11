@@ -109,8 +109,8 @@ public class Algorithms {
 			for (int j = 0; j < results.size()-1; j++) {
 				if(results.get(j)>results.get(j+1)) {
 					Double temp = results.get(j);
-					results.get(j).equals(results.get(j+1));
-					results.get(j+1).equals(temp);
+					results.set(j, results.get(j+1));
+					results.set(j+1, temp);
 				}
 			}
 		}
@@ -122,8 +122,8 @@ public class Algorithms {
 			for (int j = 0; j < sort.size()-1; j++) {
 				if(unsorted.get(j).length()>unsorted.get(j+1).length()) {
 					 String temp = sort.get(j);
-	                    sort.get(j).equals(sort.get(j+1));
-	                    sort.get(j+1).equals(temp);
+	                    sort.set(j, sort.get(j+1));
+	                    sort.set(j+1,temp);
 				}
 			}
 		}

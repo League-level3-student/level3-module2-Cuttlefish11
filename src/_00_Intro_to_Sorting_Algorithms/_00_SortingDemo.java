@@ -5,7 +5,7 @@ public class _00_SortingDemo {
         /*
          * Bubble Sort is a simple sorting algorithm that uses 2 for loops over
          * a data structure.
-         * 
+         * a
          * The inner for loop continually compares one element to the next and
          * swaps the values until a single element is in its correctly ordered
          * position.

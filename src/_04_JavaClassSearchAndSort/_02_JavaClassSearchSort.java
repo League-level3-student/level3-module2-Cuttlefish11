@@ -22,12 +22,14 @@ public class _02_JavaClassSearchSort {
     }
 
     public static Boolean arraySearch(char[] arr, char key) {
-        
-        return null;
+       Arrays.sort(arr);
+    	return Arrays.binarySearch(arr, key)>=0;
+ 
     }
     
-    public static Boolean listSearch(List<Character> list, Character key) {
-        
-        return null;
+    public static boolean listSearch(List<Character> list, Character key) {
+       Collections.sort(list);
+    	return Collections.binarySearch(list, key)>=0;
+    	
     }
 }
