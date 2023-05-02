@@ -16,6 +16,8 @@ public class _00_SortingDemo {
          * correctly ordered position. 
          */
         
+    	//remember to check upper for loop
+    	
         /*
          * Sorting an array of numbers from lowest to highest (Ascending order)
          * 1, 2, 3, 4, 5, 6, ...
